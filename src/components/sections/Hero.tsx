@@ -107,12 +107,14 @@ export function Hero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-base"
+                className="btn-primary text-base"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Reservar Cita
-                <ArrowRight className="w-5 h-5" />
+                <span className="inline-flex items-center gap-3">
+                  Reservar Cita
+                  <ArrowRight className="w-5 h-5" />
+                </span>
               </motion.a>
 
               <motion.a
@@ -135,7 +137,7 @@ export function Hero() {
             >
               {[
                 { value: `+${clinic.reviews.count}`, label: clinic.statsLabel },
-                { value: "8", label: "Tratamientos" },
+                { value: String(clinic.services.length), label: "Tratamientos" },
                 { value: clinic.reviews.rating.toString(), label: "Valoración" },
               ].map((stat, i) => (
                 <div key={i} className="text-center lg:text-left">

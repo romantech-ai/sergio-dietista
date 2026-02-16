@@ -90,7 +90,7 @@ export function WhyUs() {
           >
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "8", label: "Tratamientos", icon: "Layers" },
+                { value: String(clinic.services.length), label: "Tratamientos", icon: "Layers" },
                 { value: `+${clinic.reviews.count}`, label: `${clinic.statsLabel} satisfechos`, icon: "Users" },
                 { value: clinic.reviews.rating.toString(), label: "Valoración media", icon: "Star" },
                 { value: "100%", label: "Dedicación", icon: "Heart" },
